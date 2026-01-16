@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merlux Daily Report</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#fb923c">
+</head>
+<body>
+
+<div class="container">
+  <h1>🎨 Merlux Painting</h1>
+  <p class="subtitle">Daily Job Completion Report</p>
+
+  <!-- SUCCESS MESSAGE -->
+  <div id="successMessage" class="success hidden">
+    <div class="check-circle">✔</div>
+    <p>Form submitted successfully</p>
+  </div>
+
+  <!-- FORM -->
+  <form action="https://formspree.io/f/xjkgrwnv" method="POST">
+    <input type="hidden" name="_subject" value="Merlux Daily Job Report">
+
+    <!-- BASIC INFORMATION -->
+    <section>
+      <h2>👤 Basic Information</h2>
+      <div class="form-grid">
+        <input type="text" name="Supervisor Name" placeholder="Supervisor Name" required>
+        <input type="date" name="Date" required>
+        <input type="text" name="Painter Name" placeholder="Painter Name" required>
+        <input type="text" name="Client Name" placeholder="Client Name" required>
+        <input type="text" name="Job Location" placeholder="Job Location" required>
+        <select name="Job Type" required>
+          <option value="">Select Job Type</option>
+          <option>Interior Painting</option>
+          <option>Exterior Painting</option>
+          <option>Interior & Exterior</option>
+          <option>Commercial</option>
+          <option>Residential</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- SURFACE PREPARATION -->
+    <section>
+      <h2>🧱 Surface Preparation</h2>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="Surface Cleaning" value="Yes"> Cleaning</label>
+        <label><input type="checkbox" name="Scraping Old Paint" value="Yes"> Scraping</label>
+        <label><input type="checkbox" name="Sanding" value="Yes"> Sanding</label>
+        <label><input type="checkbox" name="Putty Filling" value="Yes"> Filling</label>
+        <label><input type="checkbox" name="Priming Applied" value="Yes"> Priming</label>
+      </div>
+    </section>
+
+    <!-- PAINT APPLICATION -->
+    <section>
+      <h2>🎨 Paint Application</h2>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="Undercoat Applied" value="Yes"> Undercoat</label>
+        <label><input type="checkbox" name="First Coat Completed" value="Yes"> First Coat</label>
+        <label><input type="checkbox" name="Second Coat Completed" value="Yes"> Second Coat</label>
+        <label><input type="checkbox" name="Finishing / Touch-ups" value="Yes"> Finishing</label>
+      </div>
+    </section>
+
+    <!-- MATERIALS USED -->
+    <section>
+      <h2>🪣 Materials Used</h2>
+      <div class="form-grid">
+        <input type="text" name="Paint Type" placeholder="Paint Type">
+        <input type="text" name="Paint Brand" placeholder="Paint Brand">
+        <input type="number" name="Liters Used" placeholder="Liters Used">
+        <input type="text" name="Primer Used" placeholder="Primer Used">
+        <input type="text" name="Putty Used" placeholder="Putty Used">
+      </div>
+    </section>
+
+    <!-- WORK DETAILS -->
+    <section>
+      <h2>⏱ Work Details</h2>
+      <div class="form-grid">
+        <input type="number" name="Area Completed (sqm)" placeholder="Area Completed (sqm)">
+        <input type="number" name="Hours Worked" placeholder="Hours Worked">
+        <input type="number" name="Workers on Site" placeholder="Workers on Site">
+      </div>
+    </section>
+
+    <!-- QUALITY CHECK -->
+    <section>
+      <h2>✅ Quality Check</h2>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="Even Coverage" value="Yes"> Even Coverage</label>
+        <label><input type="checkbox" name="No Drips or Runs" value="Yes"> No Drips</label>
+        <label><input type="checkbox" name="Clean Lines" value="Yes"> Clean Lines</label>
+        <label><input type="checkbox" name="Proper Drying Time" value="Yes"> Proper Drying</label>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section>
+      <h2>🦺 Safety Compliance</h2>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="PPE Used" value="Yes"> PPE Used</label>
+        <label><input type="checkbox" name="Scaffolding Secured" value="Yes"> Scaffolding Secured</label>
+        <label><input type="checkbox" name="Work Area Secured" value="Yes"> Area Secured</label>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL NOTES -->
+    <section>
+      <h2>📝 Additional Notes</h2>
+      <textarea name="Additional Notes" placeholder="Any delays, issues, or remarks"></textarea>
+    </section>
+
+    <button type="submit">Submit Daily Report</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
