@@ -1,17 +1,15 @@
 * {
   box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #f0f4ff;
-  color: #1e3a8a;
-  padding: 15px;
+  background: linear-gradient(135deg, #e0efff, #dbeeff); /* light blue gradient */
+  padding: 20px;
 }
 
-/* Container */
 .container {
   max-width: 900px;
   margin: auto;
@@ -20,54 +18,53 @@ body {
 /* Header */
 h1 {
   text-align: center;
-  color: #1e3a8a;
-  margin-bottom: 5px;
+  color: #1e3a8a; /* deep blue */
 }
 .subtitle {
   text-align: center;
-  color: #3b82f6;
+  color: #3b82f6; /* lighter blue */
   margin-bottom: 25px;
 }
 
-/* Sections (Flashcard style) */
+/* Flash-card sections */
 section {
   background: white;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 12px;
-  border-left: 5px solid #1e40af;
-  box-shadow: 0 10px 20px rgba(30,58,138,0.1);
+  border-radius: 14px;
+  border-left: 6px solid #1e40af; /* deep blue accent */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(30,58,138,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 h2 {
   margin-bottom: 15px;
-  color: #1e40af;
+  color: #1e3a8a; /* deep blue */
 }
 
-/* Form inputs */
+/* Forms */
 input, select, textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 12px;
   border-radius: 8px;
-  border: 1px solid #93c5fd;
-  background: #f0f4ff;
+  border: 1px solid #93c5fd; /* light blue border */
+  background: #f0f8ff; /* very light blue background */
 }
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  border-color: #3b82f6; /* blue focus */
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.3);
 }
 textarea {
   height: 90px;
   resize: none;
 }
 
-/* Form grid */
+/* Form grid for inputs */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -78,61 +75,55 @@ textarea {
 .checkbox-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 15px;
 }
 .checkbox-row label {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 10px;
+  padding: 6px 8px;
   border-radius: 6px;
-  background: #e0ebff;
+  background: #f0f8ff;
   border: 1px solid #93c5fd;
   cursor: pointer;
-  font-size: 14px;
 }
 .checkbox-row label:hover {
-  background: #dbeafe;
+  background: #e0f0ff;
 }
 input[type="checkbox"] {
-  accent-color: #3b82f6;
+  accent-color: #3b82f6; /* checkbox blue */
 }
 
 /* Submit button */
-button[type="submit"] {
+button {
   width: 100%;
   padding: 15px;
-  background: #1e40af;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* blue gradient */
   color: white;
   border: none;
   border-radius: 12px;
   font-size: 17px;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(59,130,246,0.4);
 }
-button[type="submit"]:hover {
-  background: #3b82f6;
+button:hover {
+  box-shadow: 0 15px 30px rgba(59,130,246,0.6);
 }
 
-/* Success pop-up */
+/* Success message */
 .success {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #d1fae5;
-  border: 2px solid #10b981;
-  padding: 25px 30px;
+  background: #e0fdfc; /* pale blue */
+  border: 1px solid #0284c7; /* blue border */
+  padding: 20px;
   border-radius: 14px;
   text-align: center;
-  z-index: 1000;
-  box-shadow: 0 15px 40px rgba(16,185,129,0.3);
-  animation: pop 0.4s ease-out;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(2,132,199,0.3);
 }
 .check-circle {
   width: 55px;
   height: 55px;
-  background: #10b981;
+  background: #0284c7; /* blue circle */
   color: white;
   font-size: 30px;
   border-radius: 50%;
@@ -141,34 +132,16 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: center;
 }
-.hidden { display: none; }
-
-@keyframes pop {
-  0% { transform: translate(-50%, -60%) scale(0); }
-  70% { transform: translate(-50%, -50%) scale(1.1); }
-  100% { transform: translate(-50%, -50%) scale(1); }
-}
-
-/* Back to Top button */
-#backToTop {
-  position: fixed;
-  bottom: 25px;
-  right: 20px;
-  background: #1e40af;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 22px;
-  padding: 10px 14px;
-  cursor: pointer;
+.hidden {
   display: none;
-  box-shadow: 0 6px 18px rgba(30,58,138,0.3);
-  z-index: 999;
 }
-#backToTop:hover { background: #3b82f6; }
 
 /* Responsive */
 @media (max-width: 600px) {
-  section { padding: 15px; }
-  button[type="submit"] { font-size: 16px; }
+  section {
+    padding: 15px;
+  }
+  button {
+    font-size: 16px;
+  }
 }
