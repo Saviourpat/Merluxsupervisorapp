@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #e0efff, #dbeeff); /* light blue gradient */
+  background: linear-gradient(135deg, #e0efff, #dbeeff);
   padding: 20px;
 }
 
@@ -18,11 +18,11 @@ body {
 /* Header */
 h1 {
   text-align: center;
-  color: #1e3a8a; /* deep blue */
+  color: #1e3a8a;
 }
 .subtitle {
   text-align: center;
-  color: #3b82f6; /* lighter blue */
+  color: #3b82f6;
   margin-bottom: 25px;
 }
 
@@ -32,7 +32,7 @@ section {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 14px;
-  border-left: 6px solid #1e40af; /* deep blue accent */
+  border-left: 6px solid #1e40af;
   box-shadow: 0 12px 25px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -42,7 +42,7 @@ section:hover {
 }
 h2 {
   margin-bottom: 15px;
-  color: #1e3a8a; /* deep blue */
+  color: #1e3a8a;
 }
 
 /* Forms */
@@ -51,12 +51,12 @@ input, select, textarea {
   padding: 12px;
   margin-bottom: 12px;
   border-radius: 8px;
-  border: 1px solid #93c5fd; /* light blue border */
-  background: #f0f8ff; /* very light blue background */
+  border: 1px solid #93c5fd;
+  background: #f0f8ff;
 }
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #3b82f6; /* blue focus */
+  border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59,130,246,0.3);
 }
 textarea {
@@ -91,14 +91,14 @@ textarea {
   background: #e0f0ff;
 }
 input[type="checkbox"] {
-  accent-color: #3b82f6; /* checkbox blue */
+  accent-color: #3b82f6;
 }
 
-/* Submit button */
-button {
+/* Submit button - only ONE at the bottom of form */
+button[type="submit"] {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* blue gradient */
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   color: white;
   border: none;
   border-radius: 12px;
@@ -106,54 +106,18 @@ button {
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(59,130,246,0.4);
 }
-button:hover {
+button[type="submit"]:hover {
   box-shadow: 0 15px 30px rgba(59,130,246,0.6);
 }
 
-/* Success message */
-.success {
-  background: #e0fdfc; /* pale blue */
-  border: 1px solid #0284c7; /* blue border */
-  padding: 20px;
-  border-radius: 14px;
-  text-align: center;
-  margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(2,132,199,0.3);
-}
-.check-circle {
-  width: 55px;
-  height: 55px;
-  background: #0284c7; /* blue circle */
-  color: white;
-  font-size: 30px;
-  border-radius: 50%;
-  margin: 0 auto 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hidden {
-  display: none;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  section {
-    padding: 15px;
-  }
-  button {
-    font-size: 16px;
-  }
-}
-
-/* Success pop-up fixed in middle of screen */
+/* Success pop-up - fixed center, no arrow */
 .success {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #e0fdfc; /* pale blue */
-  border: 2px solid #0284c7; /* blue border */
+  background: #e0fdfc;
+  border: 2px solid #0284c7;
   padding: 25px 30px;
   border-radius: 14px;
   text-align: center;
@@ -176,10 +140,22 @@ button:hover {
   justify-content: center;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
 @keyframes pop {
   0% { transform: translate(-50%, -60%) scale(0); }
   70% { transform: translate(-50%, -50%) scale(1.1); }
   100% { transform: translate(-50%, -50%) scale(1); }
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+  section {
+    padding: 15px;
+  }
+  button[type="submit"] {
+    font-size: 16px;
+  }
+  }
