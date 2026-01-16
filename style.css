@@ -145,3 +145,41 @@ button:hover {
     font-size: 16px;
   }
 }
+
+/* Success pop-up fixed in middle of screen */
+.success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e0fdfc; /* pale blue */
+  border: 2px solid #0284c7; /* blue border */
+  padding: 25px 30px;
+  border-radius: 14px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 15px 40px rgba(2,132,199,0.3);
+  animation: pop 0.4s ease-out;
+}
+
+/* Circle check icon */
+.check-circle {
+  width: 55px;
+  height: 55px;
+  background: #0284c7;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden { display: none; }
+
+@keyframes pop {
+  0% { transform: translate(-50%, -60%) scale(0); }
+  70% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
