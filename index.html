@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#fb923c">
+  <meta name="theme-color" content="#1e3a8a">
 </head>
 <body>
 
@@ -74,7 +74,37 @@
       <div class="form-grid">
         <input type="text" name="Paint Type" placeholder="Paint Type">
         <input type="text" name="Paint Brand" placeholder="Paint Brand">
-        <input type="number" name="Liters Used" placeholder="Liters Used">
+        <input type="number" name="Liters Used" placeholder="Liters Used" step="0.1">
+        <input type="text" name="Primer Used" placeholder="Primer Used">
+        <input type="text" name="Putty Used" placeholder="Putty Used">
+      </div>
+    </section>
+
+    <!-- PAINT DETAILS (Nigerian-specific) -->
+    <section>
+      <h2>🖌 Paint Details</h2>
+      <div class="form-grid">
+        <select name="Room/Area Painted" required>
+          <option value="">Select Room/Area</option>
+          <option>Full House</option>
+          <option>Living Room</option>
+          <option>Bedroom</option>
+          <option>Kitchen</option>
+          <option>Bathroom</option>
+          <option>Exterior Walls</option>
+          <option>Others</option>
+        </select>
+        <select name="Paint Type Used" required>
+          <option value="">Select Paint Type</option>
+          <option>Silk</option>
+          <option>Matt</option>
+          <option>Eggshell</option>
+          <option>Metallic Gold</option>
+          <option>Chess Silver</option>
+          <option>Decorative / Textured</option>
+        </select>
+        <input type="text" name="Paint Brand Used" placeholder="Brand of Paint">
+        <input type="number" name="Liters Used" placeholder="Liters Used" step="0.1">
         <input type="text" name="Primer Used" placeholder="Primer Used">
         <input type="text" name="Putty Used" placeholder="Putty Used">
       </div>
@@ -111,10 +141,30 @@
       </div>
     </section>
 
+    <!-- COMPANY UNIFORM & TOOLS -->
+    <section>
+      <h2>👕 Company Uniform & Tools</h2>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="Uniform Worn" value="Yes"> Uniform Worn</label>
+        <label><input type="checkbox" name="Brushes Ready" value="Yes"> Brushes Ready</label>
+        <label><input type="checkbox" name="Rollers Ready" value="Yes"> Rollers Ready</label>
+        <label><input type="checkbox" name="Scaffolding Checked" value="Yes"> Scaffolding Checked</label>
+        <label><input type="checkbox" name="Area Cleaned" value="Yes"> Area Cleaned</label>
+      </div>
+    </section>
+
     <!-- ADDITIONAL NOTES -->
     <section>
       <h2>📝 Additional Notes</h2>
       <textarea name="Additional Notes" placeholder="Any delays, issues, or remarks"></textarea>
+    </section>
+
+    <!-- WORK APPROVAL -->
+    <section>
+      <h2>✔ Supervisor Approval</h2>
+      <div class="checkbox-row">
+        <label><input type="checkbox" name="Work Approved by Supervisor" value="Yes"> Work Approved</label>
+      </div>
     </section>
 
     <button type="submit">Submit Daily Report</button>
