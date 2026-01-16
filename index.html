@@ -81,35 +81,31 @@
     </section>
 
     <!-- PAINT DETAILS (Nigerian-specific) -->
-    <section>
-      <h2>🖌 Paint Details</h2>
-      <div class="form-grid">
-        <select name="Room/Area Painted" required>
-          <option value="">Select Room/Area</option>
-          <option>Full House</option>
-          <option>Living Room</option>
-          <option>Bedroom</option>
-          <option>Kitchen</option>
-          <option>Bathroom</option>
-          <option>Exterior Walls</option>
-          <option>Others</option>
-        </select>
-        <select name="Paint Type Used" required>
-          <option value="">Select Paint Type</option>
-          <option>Silk</option>
-          <option>Matt</option>
-          <option>Eggshell</option>
-          <option>Metallic Gold</option>
-          <option>Chess Silver</option>
-          <option>Decorative / Textured</option>
-        </select>
-        <input type="text" name="Paint Brand Used" placeholder="Brand of Paint">
-        <input type="number" name="Liters Used" placeholder="Liters Used" step="0.1">
-        <input type="text" name="Primer Used" placeholder="Primer Used">
-        <input type="text" name="Putty Used" placeholder="Putty Used">
-      </div>
-    </section>
+<!-- PAINT DETAILS (Updated for multiple rooms and paint types) -->
+<section>
+  <h2>🖌 Room/Area Painted</h2>
+  <div class="checkbox-row">
+    <label><input type="checkbox" name="Room/Area Painted" value="Full House"> Full House</label>
+    <label><input type="checkbox" name="Room/Area Painted" value="Living Room"> Living Room</label>
+    <label><input type="checkbox" name="Room/Area Painted" value="Bedroom"> Bedroom</label>
+    <label><input type="checkbox" name="Room/Area Painted" value="Kitchen"> Kitchen</label>
+    <label><input type="checkbox" name="Room/Area Painted" value="Bathroom"> Bathroom</label>
+    <label><input type="checkbox" name="Room/Area Painted" value="Exterior Walls"> Exterior Walls</label>
+    <label><input type="checkbox" name="Room/Area Painted" value="Others"> Others</label>
+  </div>
+</section>
 
+<section>
+  <h2>🎨 Paint Type Used</h2>
+  <div class="checkbox-row">
+    <label><input type="checkbox" name="Paint Type Used" value="Silk"> Silk</label>
+    <label><input type="checkbox" name="Paint Type Used" value="Matt"> Matt</label>
+    <label><input type="checkbox" name="Paint Type Used" value="Eggshell"> Eggshell</label>
+    <label><input type="checkbox" name="Paint Type Used" value="Metallic Gold"> Metallic Gold</label>
+    <label><input type="checkbox" name="Paint Type Used" value="Chess Silver"> Chess Silver</label>
+    <label><input type="checkbox" name="Paint Type Used" value="Decorative / Textured"> Decorative / Textured</label>
+  </div>
+</section>
     <!-- WORK DETAILS -->
     <section>
       <h2>⏱ Work Details</h2>
